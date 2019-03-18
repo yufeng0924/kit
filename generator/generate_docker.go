@@ -102,7 +102,7 @@ func (g *GenerateDocker) generateDockerFile(name, svcFilePath, httpFilePath, grp
 	if b, err := g.fs.Exists(path.Join(name, "Dockerfile")); err != nil {
 		return err
 	} else if b {
-		pth = "/go/src/" + pth
+		pth = "/www/go/src/" + pth
 		return g.addToDockerCompose(name, pth, httpFilePath, grpcFilePath)
 	}
 	if b, err := g.fs.Exists("docker-compose.yml"); err != nil {
