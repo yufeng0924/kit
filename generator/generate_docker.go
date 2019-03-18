@@ -155,7 +155,7 @@ RUN cd %s && glide install
 ENTRYPOINT  watcher -run %s/%s/cmd -watch %s/%s
 `
 	}
-	fpath := "/go/src/" + pth
+	fpath := "/www/go/src/" + pth
 	err = g.addToDockerCompose(name, fpath, httpFilePath, grpcFilePath)
 	if err != nil {
 		return err
